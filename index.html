@@ -1,376 +1,644 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cargas Molina Panamá | Transporte y logística confiable</title>
-  <meta name="description" content="Cargas Molina Panamá ofrece transporte y logística confiable a nivel nacional e internacional en Centroamérica. Cobertura en Zona Libre de Colón, Ciudad de Panamá, Chorrera, Coclé, Provincias Centrales y Chiriquí." />
+  <title>Cargas Molina Panamá | Transporte y Logística</title>
+  <meta name="description" content="Mudanzas, transporte de carga, logística empresarial y cobertura en Panamá y Centroamérica. Cotiza por WhatsApp con Cargas Molina Panamá." />
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      scroll-behavior: smooth;
+    :root{
+      --bg-dark:#07122e;
+      --bg-mid:#0d1f4d;
+      --bg-card:rgba(255,255,255,.08);
+      --text:#ffffff;
+      --muted:#d9e3ff;
+      --accent:#ffd54a;
+      --green:#25D366;
+      --border:rgba(255,255,255,.12);
+      --shadow:0 10px 30px rgba(0,0,0,.25);
+      --radius:20px;
     }
 
-    body {
+    *{
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
       font-family: Arial, sans-serif;
-      background: linear-gradient(180deg, #031634 0%, #06386d 55%, #0a5fb3 100%);
-      color: white;
-      line-height: 1.6;
+      background: linear-gradient(180deg, var(--bg-dark), #0b2f73 55%, #0a173b);
+      color: var(--text);
+      line-height:1.5;
     }
 
-    .container {
-      width: 92%;
-      max-width: 1180px;
-      margin: 0 auto;
+    a{
+      text-decoration:none;
+      color:inherit;
     }
 
-    header {
-      padding: 50px 0 30px;
-      text-align: center;
+    img{
+      max-width:100%;
+      display:block;
+      border-radius:16px;
     }
 
-    .logo {
-      width: 180px;
-      max-width: 90%;
-      border-radius: 50%;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-      margin-bottom: 22px;
+    .container{
+      width:min(1120px, 92%);
+      margin:0 auto;
     }
 
-    h1 {
-      font-size: 2.6rem;
-      font-weight: 800;
-      color: #ffffff;
-      margin-bottom: 14px;
-      text-transform: uppercase;
+    .nav{
+      position:sticky;
+      top:0;
+      z-index:1000;
+      backdrop-filter: blur(12px);
+      background: rgba(7,18,46,.75);
+      border-bottom:1px solid var(--border);
     }
 
-    .highlight {
-      color: #ffd400;
+    .nav-wrap{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 0;
+      gap:16px;
     }
 
-    .subtitle {
-      font-size: 1.2rem;
-      max-width: 860px;
-      margin: 0 auto 26px;
-      color: #eef6ff;
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:700;
     }
 
-    .hero-buttons {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 20px;
+    .brand img{
+      width:52px;
+      height:52px;
+      border-radius:50%;
+      object-fit:cover;
+      border:2px solid rgba(255,255,255,.2);
     }
 
-    .btn {
-      display: inline-block;
-      padding: 15px 28px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: transform 0.2s ease, opacity 0.2s ease;
+    .brand span{
+      font-size:1rem;
     }
 
-    .btn:hover {
-      transform: translateY(-2px);
-      opacity: 0.95;
+    .nav-links{
+      display:flex;
+      gap:18px;
+      flex-wrap:wrap;
+      font-size:.95rem;
+      color:var(--muted);
     }
 
-    .btn-primary {
-      background: #25D366;
-      color: white;
+    .hero{
+      position:relative;
+      min-height:92vh;
+      display:flex;
+      align-items:center;
+      overflow:hidden;
     }
 
-    .btn-secondary {
-      background: #ffd400;
-      color: #0a1733;
+    .hero::before{
+      content:"";
+      position:absolute;
+      inset:0;
+      background:
+        linear-gradient(rgba(5,10,30,.62), rgba(5,10,30,.75)),
+        url('portada.jpg') center/cover no-repeat;
+      transform:scale(1.03);
     }
 
-    section {
-      padding: 55px 0;
+    .hero-content{
+      position:relative;
+      z-index:2;
+      padding:72px 0;
+      max-width:760px;
     }
 
-    .section-card {
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 20px;
-      padding: 28px;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    .eyebrow{
+      display:inline-block;
+      background:rgba(255,213,74,.14);
+      color:var(--accent);
+      border:1px solid rgba(255,213,74,.25);
+      padding:8px 14px;
+      border-radius:999px;
+      font-weight:700;
+      margin-bottom:18px;
+      font-size:.92rem;
     }
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 18px;
-      color: #ffd400;
-      text-align: center;
+    h1{
+      font-size:clamp(2.2rem, 5vw, 4rem);
+      line-height:1.05;
+      margin-bottom:18px;
+      font-weight:800;
     }
 
-    p.section-text {
-      text-align: center;
-      color: #f3f8ff;
-      max-width: 920px;
-      margin: 0 auto 24px;
-      font-size: 1.05rem;
+    .hero p{
+      color:var(--muted);
+      font-size:1.08rem;
+      max-width:700px;
+      margin-bottom:26px;
     }
 
-    .grid {
-      display: grid;
-      gap: 20px;
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin-bottom:24px;
     }
 
-    .grid-3 {
-      grid-template-columns: repeat(3, 1fr);
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:15px 22px;
+      border-radius:14px;
+      font-weight:700;
+      border:1px solid transparent;
+      transition:.2s ease;
+      box-shadow:var(--shadow);
     }
 
-    .grid-2 {
-      grid-template-columns: repeat(2, 1fr);
+    .btn:hover{
+      transform:translateY(-2px);
     }
 
-    .card {
-      background: rgba(255,255,255,0.08);
-      border-radius: 18px;
-      padding: 24px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
-      border: 1px solid rgba(255,255,255,0.12);
+    .btn-primary{
+      background:var(--green);
+      color:#fff;
     }
 
-    .card h3 {
-      color: #ffffff;
-      margin-bottom: 12px;
-      font-size: 1.2rem;
+    .btn-secondary{
+      background:rgba(255,255,255,.08);
+      color:#fff;
+      border-color:rgba(255,255,255,.15);
     }
 
-    .card p, .card li {
-      color: #ebf4ff;
-      font-size: 0.98rem;
+    .hero-points{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+      gap:12px;
+      margin-top:24px;
     }
 
-    ul {
-      list-style: none;
-      padding-left: 0;
+    .point{
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.1);
+      padding:14px 16px;
+      border-radius:16px;
+      color:#fff;
     }
 
-    ul li {
-      margin-bottom: 10px;
+    .section{
+      padding:76px 0;
     }
 
-    .coverage-list li::before,
-    .service-list li::before,
-    .why-list li::before {
-      content: "✔ ";
-      color: #ffd400;
-      font-weight: bold;
+    .section-title{
+      text-align:center;
+      margin-bottom:12px;
+      font-size:clamp(1.8rem, 3vw, 2.7rem);
+      color:var(--accent);
+      font-weight:800;
     }
 
-    .contact-box {
-      text-align: center;
+    .section-subtitle{
+      text-align:center;
+      color:var(--muted);
+      max-width:780px;
+      margin:0 auto 34px;
+      font-size:1rem;
     }
 
-    .contact-box p {
-      font-size: 1.08rem;
-      margin-bottom: 10px;
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:20px;
     }
 
-    .contact-strong {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #ffffff;
+    .card{
+      background:var(--bg-card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
     }
 
-    .footer {
-      background: #021127;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 0.95rem;
-      color: #d9e8ff;
+    .card h3{
+      margin-bottom:12px;
+      font-size:1.25rem;
     }
 
-    .whatsapp-float {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 999;
+    .card ul{
+      list-style:none;
+      display:grid;
+      gap:10px;
+      color:var(--muted);
     }
 
-    .whatsapp-float img {
-      width: 58px;
-      height: 58px;
-      border-radius: 50%;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    .card li::before{
+      content:"✔ ";
+      color:var(--accent);
+      font-weight:700;
     }
 
-    @media (max-width: 900px) {
-      .grid-3,
-      .grid-2 {
-        grid-template-columns: 1fr;
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:18px;
+    }
+
+    .step{
+      background:var(--bg-card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:22px;
+      text-align:center;
+    }
+
+    .step-number{
+      width:46px;
+      height:46px;
+      margin:0 auto 14px;
+      border-radius:50%;
+      background:var(--accent);
+      color:#111;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight:800;
+      font-size:1.1rem;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:18px;
+    }
+
+    .gallery-item{
+      background:var(--bg-card);
+      border:1px solid var(--border);
+      border-radius:18px;
+      overflow:hidden;
+      box-shadow:var(--shadow);
+    }
+
+    .gallery-item img{
+      width:100%;
+      height:230px;
+      object-fit:cover;
+      border-radius:0;
+    }
+
+    .gallery-item span{
+      display:block;
+      padding:14px 16px;
+      color:var(--muted);
+      font-weight:700;
+    }
+
+    .coverage{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:20px;
+    }
+
+    .coverage-box{
+      background:var(--bg-card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .coverage-box h3{
+      margin-bottom:14px;
+    }
+
+    .coverage-box ul{
+      list-style:none;
+      display:grid;
+      gap:10px;
+      color:var(--muted);
+    }
+
+    .coverage-box li::before{
+      content:"📍 ";
+    }
+
+    .contact{
+      text-align:center;
+      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
+      border:1px solid var(--border);
+      border-radius:28px;
+      padding:38px 22px;
+      box-shadow:var(--shadow);
+    }
+
+    .contact p{
+      color:var(--muted);
+      margin:10px 0;
+      font-size:1.02rem;
+    }
+
+    .footer{
+      text-align:center;
+      padding:24px 12px 40px;
+      color:#c6d3ff;
+      font-size:.95rem;
+    }
+
+    .whatsapp-float{
+      position:fixed;
+      right:20px;
+      bottom:20px;
+      width:62px;
+      height:62px;
+      border-radius:50%;
+      background:var(--green);
+      color:white;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:28px;
+      box-shadow:0 12px 25px rgba(0,0,0,.32);
+      z-index:1001;
+    }
+
+    .highlight{
+      color:var(--accent);
+    }
+
+    @media (max-width: 768px){
+      .nav-links{
+        display:none;
       }
 
-      h1 {
-        font-size: 2rem;
+      .hero{
+        min-height:84vh;
       }
 
-      .subtitle {
-        font-size: 1.05rem;
+      .hero-content{
+        padding:54px 0;
       }
 
-      h2 {
-        font-size: 1.7rem;
+      .btn{
+        width:100%;
+      }
+
+      .gallery-item img{
+        height:200px;
       }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="container">
-      <img src="image-7.jpg" alt="Logo Cargas Molina Panamá" class="logo" />
-      <h1>Cargas Molina <span class="highlight">Panamá</span></h1>
-      <p class="subtitle">
-        Transporte y logística confiable <strong>a nivel nacional e internacional en Centroamérica</strong>.
-        Soluciones rápidas, seguras y eficientes para empresas y clientes particulares.
-      </p>
-      <div class="hero-buttons">
-        <a class="btn btn-primary" href="https://wa.me/50769035879?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20transporte" target="_blank">
-          Solicitar cotización por WhatsApp
-        </a>
-        <a class="btn btn-secondary" href="#cobertura">
-          Ver cobertura
-        </a>
+  <header class="nav">
+    <div class="container nav-wrap">
+      <div class="brand">
+        <img src="camion.jpg" alt="Cargas Molina Panamá">
+        <span>Cargas Molina Panamá</span>
       </div>
+      <nav class="nav-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#proceso">Cómo trabajamos</a>
+        <a href="#galeria">Galería</a>
+        <a href="#cobertura">Cobertura</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
     </div>
   </header>
 
-  <section id="servicios">
+  <section class="hero">
     <div class="container">
-      <div class="section-card">
-        <h2>Servicios</h2>
-        <p class="section-text">
-          Brindamos soluciones logísticas adaptadas a cada necesidad, con enfoque en puntualidad, seguridad y atención profesional.
+      <div class="hero-content">
+        <div class="eyebrow">🚛 Transporte y logística en Panamá y Centroamérica</div>
+        <h1>Mudanzas, carga y logística <span class="highlight">rápida, segura y profesional</span></h1>
+        <p>
+          Soluciones confiables para clientes particulares, empresas, comercios y operaciones logísticas.
+          Cotizamos en minutos por WhatsApp y coordinamos servicios en todo Panamá y conexiones hacia Centroamérica.
         </p>
 
-        <div class="grid grid-3">
-          <div class="card">
-            <h3>Transporte de carga</h3>
-            <ul class="service-list">
-              <li>Mercancía general</li>
-              <li>Carga liviana y pesada</li>
-              <li>Distribución comercial</li>
-              <li>Traslados programados</li>
-            </ul>
-          </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://wa.me/50769035879?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20transporte.">
+            📲 Cotiza por WhatsApp en 1 minuto
+          </a>
+          <a class="btn btn-secondary" href="#servicios">
+            Ver servicios
+          </a>
+        </div>
 
-          <div class="card">
-            <h3>Logística empresarial</h3>
-            <ul class="service-list">
-              <li>Apoyo a empresas y comercios</li>
-              <li>Movimientos entre sucursales</li>
-              <li>Rutas organizadas</li>
-              <li>Atención responsable y rápida</li>
-            </ul>
-          </div>
-
-          <div class="card">
-            <h3>Servicios adicionales</h3>
-            <ul class="service-list">
-              <li>Mudanzas</li>
-              <li>Entregas especiales</li>
-              <li>Coordinación de traslados</li>
-              <li>Cotización personalizada</li>
-            </ul>
-          </div>
+        <div class="hero-points">
+          <div class="point">⚡ Respuesta rápida</div>
+          <div class="point">✅ Cobertura nacional</div>
+          <div class="point">🌎 Enlace con Centroamérica</div>
+          <div class="point">📦 Atención para empresas y particulares</div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="cobertura">
+  <section id="servicios" class="section">
     <div class="container">
-      <div class="section-card">
-        <h2>Cobertura</h2>
-        <p class="section-text">
-          Operamos con cobertura estratégica para atender rutas clave del país y conexiones logísticas hacia Centroamérica.
-        </p>
+      <h2 class="section-title">Servicios</h2>
+      <p class="section-subtitle">
+        Brindamos soluciones logísticas adaptadas a cada necesidad, con enfoque en puntualidad,
+        responsabilidad y atención directa.
+      </p>
 
-        <div class="grid grid-2">
-          <div class="card">
-            <h3>A nivel nacional</h3>
-            <ul class="coverage-list">
-              <li>Ciudad de Panamá</li>
-              <li>Zona Libre de Colón</li>
-              <li>La Chorrera</li>
-              <li>Coclé</li>
-              <li>Provincias Centrales</li>
-              <li>Chiriquí</li>
-            </ul>
-          </div>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Transporte de carga</h3>
+          <ul>
+            <li>Mercancía general</li>
+            <li>Carga liviana y pesada</li>
+            <li>Distribución comercial</li>
+            <li>Traslados programados</li>
+          </ul>
+        </div>
 
-          <div class="card">
-            <h3>A nivel internacional</h3>
-            <ul class="coverage-list">
-              <li>Conexiones logísticas en Centroamérica</li>
-              <li>Rutas coordinadas según necesidad</li>
-              <li>Apoyo para operaciones comerciales</li>
-              <li>Atención orientada a negocios y distribución</li>
-            </ul>
-          </div>
+        <div class="card">
+          <h3>Logística empresarial</h3>
+          <ul>
+            <li>Apoyo a empresas y comercios</li>
+            <li>Movimientos entre sucursales</li>
+            <li>Rutas organizadas</li>
+            <li>Atención responsable y rápida</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Servicios adicionales</h3>
+          <ul>
+            <li>Mudanzas residenciales y comerciales</li>
+            <li>Entregas especiales</li>
+            <li>Coordinación de traslados</li>
+            <li>Cotización personalizada</li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="porque-elegirnos">
+  <section id="proceso" class="section">
     <div class="container">
-      <div class="section-card">
-        <h2>¿Por qué elegirnos?</h2>
-        <div class="grid grid-3">
-          <div class="card">
-            <h3>Atención profesional</h3>
-            <ul class="why-list">
-              <li>Respuesta rápida</li>
-              <li>Comunicación clara</li>
-              <li>Trato responsable</li>
-            </ul>
-          </div>
+      <h2 class="section-title">¿Cómo trabajamos?</h2>
+      <p class="section-subtitle">
+        Hacemos el proceso simple para que tu carga o mudanza se coordine rápido y sin complicaciones.
+      </p>
 
-          <div class="card">
-            <h3>Confianza y cumplimiento</h3>
-            <ul class="why-list">
-              <li>Puntualidad</li>
-              <li>Compromiso con cada servicio</li>
-              <li>Seguimiento de la operación</li>
-            </ul>
-          </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <h3>Escríbenos</h3>
+          <p>Nos contactas por WhatsApp y nos indicas origen, destino, fecha y tipo de carga.</p>
+        </div>
 
-          <div class="card">
-            <h3>Alcance estratégico</h3>
-            <ul class="why-list">
-              <li>Cobertura nacional</li>
-              <li>Enlace con Centroamérica</li>
-              <li>Puntos clave de operación</li>
-            </ul>
-          </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <h3>Te cotizamos</h3>
+          <p>Evaluamos tu necesidad y te enviamos una cotización rápida y clara.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">3</div>
+          <h3>Coordinamos</h3>
+          <p>Definimos horario, unidad disponible y detalles del servicio.</p>
+        </div>
+
+        <div class="step">
+          <div class="step-number">4</div>
+          <h3>Realizamos el traslado</h3>
+          <p>Ejecutamos el servicio con puntualidad, seguimiento y atención responsable.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contacto">
+  <section id="galeria" class="section">
     <div class="container">
-      <div class="section-card contact-box">
-        <h2>Contacto</h2>
-        <p class="contact-strong">Cargas Molina Panamá</p>
+      <h2 class="section-title">Galería</h2>
+      <p class="section-subtitle">
+        Imágenes de referencia de operaciones, unidades de carga y trabajo logístico.
+      </p>
+
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="portada.jpg" alt="Transporte de maquinaria pesada">
+          <span>Transporte de maquinaria y carga especial</span>
+        </div>
+        <div class="gallery-item">
+          <img src="flota.jpg" alt="Flota de camiones">
+          <span>Unidades para distribución y mudanzas</span>
+        </div>
+        <div class="gallery-item">
+          <img src="carga.jpg" alt="Camión con mercancía">
+          <span>Traslado de mercancía y carga comercial</span>
+        </div>
+        <div class="gallery-item">
+          <img src="trabajo.jpg" alt="Personal cargando mercancía">
+          <span>Operación logística y carga en movimiento</span>
+        </div>
+        <div class="gallery-item">
+          <img src="camion.jpg" alt="Camión de mudanza">
+          <span>Servicio de mudanzas y transporte dedicado</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cobertura" class="section">
+    <div class="container">
+      <h2 class="section-title">Cobertura</h2>
+      <p class="section-subtitle">
+        Operamos con cobertura estratégica para atender rutas clave del país y conexiones logísticas hacia Centroamérica.
+      </p>
+
+      <div class="coverage">
+        <div class="coverage-box">
+          <h3>A nivel nacional</h3>
+          <ul>
+            <li>Ciudad de Panamá</li>
+            <li>Zona Libre de Colón</li>
+            <li>La Chorrera</li>
+            <li>Coclé</li>
+            <li>Provincias Centrales</li>
+            <li>Chiriquí</li>
+          </ul>
+        </div>
+
+        <div class="coverage-box">
+          <h3>A nivel internacional</h3>
+          <ul>
+            <li>Conexiones logísticas en Centroamérica</li>
+            <li>Rutas coordinadas según necesidad</li>
+            <li>Apoyo para operaciones comerciales</li>
+            <li>Atención orientada a negocios y distribución</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">¿Por qué elegirnos?</h2>
+      <p class="section-subtitle">
+        Enfocamos cada servicio en cumplimiento, comunicación clara y atención directa.
+      </p>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3>Atención profesional</h3>
+          <ul>
+            <li>Respuesta rápida</li>
+            <li>Comunicación clara</li>
+            <li>Trato responsable</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Confianza y cumplimiento</h3>
+          <ul>
+            <li>Puntualidad</li>
+            <li>Compromiso con cada servicio</li>
+            <li>Seguimiento de la operación</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Alcance estratégico</h3>
+          <ul>
+            <li>Cobertura nacional</li>
+            <li>Enlace con Centroamérica</li>
+            <li>Puntos clave de operación</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="section">
+    <div class="container">
+      <div class="contact">
+        <h2 class="section-title" style="margin-bottom:8px;">Contacto</h2>
+        <p><strong>Cargas Molina Panamá</strong></p>
         <p>Transporte y logística confiable para empresas y clientes particulares.</p>
         <p><strong>WhatsApp:</strong> +507 6903-5879</p>
         <p><strong>Email:</strong> info@cargasmolina.com</p>
         <p><strong>Cobertura:</strong> Panamá y Centroamérica</p>
-        <div class="hero-buttons" style="margin-top: 20px;">
-          <a class="btn btn-primary" href="https://wa.me/50769035879?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios" target="_blank">
+
+        <div class="cta-row" style="justify-content:center; margin-top:20px;">
+          <a class="btn btn-primary" href="https://wa.me/50769035879?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20transporte.">
             Escríbenos ahora
           </a>
         </div>
@@ -378,13 +646,13 @@
     </div>
   </section>
 
-  <a class="whatsapp-float" href="https://wa.me/50769035879?text=Hola,%20quiero%20cotizar%20un%20servicio" target="_blank" aria-label="WhatsApp">
-    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+  <a class="whatsapp-float" href="https://wa.me/50769035879?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20transporte." aria-label="WhatsApp">
+    ☎
   </a>
 
-  <div class="footer">
+  <footer class="footer">
     © 2026 Cargas Molina Panamá. Todos los derechos reservados.
-  </div>
+  </footer>
 
 </body>
-</html>  
+</html>
