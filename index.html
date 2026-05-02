@@ -836,11 +836,7 @@
     </div>
   </section>
 <a class="whatsapp-float" href="https://wa.me/50769035879"
-onclick="gtag('event','conversion',{
-'send_to':'AW-18121442049/LKHCLL-laycEIGG_cBD',
-'value':1.0,
-'currency':'USD'
-}); setTimeout(function(){ window.location.href=this.href; }.bind(this),200); return false;"
+onclick="return gtag_report_conversion('https://wa.me/50769035879');"
 aria-label="WhatsApp">
     <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
   </a>
@@ -848,6 +844,21 @@ aria-label="WhatsApp">
   <footer class="footer">
     © 2026 Cargas Molina Panamá. Todos los derechos reservados.
   </footer>
-
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+    'send_to': 'AW-18121442049/LKHCLL-laycEIGG_cBD',
+    'value': 1.0,
+    'currency': 'USD',
+    'event_callback': callback
+  });
+  return false;
+}
+</script>
 </body>
 </html>
