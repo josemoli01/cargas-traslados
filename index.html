@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cargas Molina Panamá</title>
+<title>Cargas Molina Panamá | Transporte y Logística</title>
 
-<!-- GOOGLE ADS -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18121442049"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -13,212 +12,384 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'AW-18121442049');
 
-function convertir(){
+function gtag_report_conversion(url){
   gtag('event','conversion',{
     'send_to':'AW-18121442049/_LKHCLL-laYcEIGG_cBD'
   });
+  setTimeout(function(){ window.location = url; }, 250);
+  return false;
 }
 </script>
 
 <style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
 body{
-  margin:0;
-  font-family:Arial;
-  background:#0b1c2c;
+  font-family:Arial, sans-serif;
+  background:#061529;
   color:white;
 }
-
-header{
+a{text-decoration:none}
+.header{
+  position:fixed;
+  top:0;
+  width:100%;
+  z-index:999;
+  background:rgba(3,12,25,.92);
+  backdrop-filter:blur(12px);
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:15px 5%;
-  background:#07131f;
+  padding:14px 7%;
+  border-bottom:1px solid rgba(255,255,255,.12);
 }
-
-header img{
-  width:60px;
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.brand img{
+  width:58px;
+  height:58px;
   border-radius:50%;
+  object-fit:cover;
 }
-
-header h2{
-  margin:0;
-}
-
+.brand strong{font-size:22px}
+.brand span{font-size:14px;color:#7bdcff}
 .btn{
   background:#25D366;
-  padding:12px 20px;
-  border-radius:30px;
-  color:#021018;
-  text-decoration:none;
+  color:#03101f;
+  padding:14px 24px;
+  border-radius:40px;
+  font-weight:900;
+  display:inline-block;
+  box-shadow:0 0 24px rgba(37,211,102,.45);
+}
+.hero{
+  min-height:100vh;
+  padding:120px 7% 70px;
+  background:
+    linear-gradient(90deg,rgba(2,10,25,.92),rgba(2,10,25,.55)),
+    url("Camionrojo1.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+}
+.hero-content{
+  max-width:780px;
+}
+.badge{
+  display:inline-block;
+  background:rgba(37,211,102,.16);
+  border:1px solid #25D366;
+  color:#25D366;
+  padding:9px 16px;
+  border-radius:40px;
+  font-weight:bold;
+  margin-bottom:18px;
+}
+.hero h1{
+  font-size:62px;
+  line-height:1.05;
+  margin-bottom:18px;
+}
+.hero h1 span{color:#ffd34d}
+.hero p{
+  font-size:21px;
+  line-height:1.5;
+  color:#e5f3ff;
+  margin-bottom:25px;
+}
+.hero-actions{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+}
+.btn-secondary{
+  border:1px solid rgba(255,255,255,.35);
+  color:white;
+  padding:14px 24px;
+  border-radius:40px;
   font-weight:bold;
 }
-
-.hero{
-  height:80vh;
-  background:url('portada.jpg') center/cover;
+.trust{
   display:flex;
-  align-items:center;
-  padding:5%;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:28px;
 }
-
-.hero-box{
-  background:rgba(0,0,0,0.6);
-  padding:30px;
-  border-radius:20px;
+.trust div{
+  background:rgba(255,255,255,.12);
+  padding:12px 16px;
+  border-radius:14px;
+  border:1px solid rgba(255,255,255,.14);
 }
-
-.hero h1{
-  font-size:45px;
+section{
+  padding:75px 7%;
 }
-
-.section{
-  padding:60px 5%;
+.title{
+  text-align:center;
+  margin-bottom:38px;
 }
-
+.title h2{
+  font-size:42px;
+  color:#ffd34d;
+  margin-bottom:10px;
+}
+.title p{
+  color:#cce7ff;
+  font-size:18px;
+}
 .grid{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:22px;
 }
-
 .card{
-  background:#102c44;
-  padding:20px;
-  border-radius:15px;
+  background:linear-gradient(180deg,#103f78,#08284f);
+  border:1px solid rgba(255,255,255,.12);
+  padding:26px;
+  border-radius:24px;
+  box-shadow:0 15px 35px rgba(0,0,0,.35);
 }
-
 .card h3{
   color:#ffd34d;
+  font-size:23px;
+  margin-bottom:10px;
 }
-
-.gallery img{
+.card p{
+  color:#d7ecff;
+  line-height:1.5;
+}
+.photo{
+  overflow:hidden;
+  border-radius:24px;
+  background:#08284f;
+  border:1px solid rgba(255,255,255,.12);
+  box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+.photo img{
   width:100%;
-  border-radius:15px;
+  height:260px;
+  object-fit:cover;
+  display:block;
+  transition:.4s;
 }
-
-.cover{
+.photo:hover img{transform:scale(1.06)}
+.photo h3{
+  padding:18px;
+  background:linear-gradient(90deg,#00c6ff,#0072ff);
+}
+.video-box{
+  max-width:950px;
+  margin:auto;
+  border-radius:28px;
+  overflow:hidden;
+  box-shadow:0 20px 45px rgba(0,0,0,.45);
+  border:1px solid rgba(255,255,255,.15);
+}
+video{
+  width:100%;
+  display:block;
+}
+.coverage{
+  background:linear-gradient(135deg,#08284f,#064b80);
+  border-radius:32px;
+  padding:40px;
   text-align:center;
 }
-
-.cover span{
-  display:inline-block;
-  background:#1b4e77;
-  padding:10px 15px;
-  margin:5px;
-  border-radius:20px;
+.zones{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:24px;
 }
-
-footer{
-  background:#04101c;
-  padding:20px;
+.zones span{
+  background:rgba(255,255,255,.15);
+  padding:12px 18px;
+  border-radius:30px;
+}
+.cta{
   text-align:center;
+  background:
+    linear-gradient(rgba(2,10,25,.88),rgba(2,10,25,.9)),
+    url("Camionrojo2.jpg") center/cover no-repeat;
 }
-
+.cta h2{
+  font-size:44px;
+  color:#ffd34d;
+  margin-bottom:14px;
+}
+.cta p{
+  color:#d8eeff;
+  margin-bottom:22px;
+}
 .float{
   position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  width:60px;
-  height:60px;
+  right:22px;
+  bottom:22px;
+  width:70px;
+  height:70px;
   border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:30px;
+  background:#25D366;
   color:white;
-  text-decoration:none;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:34px;
+  z-index:1000;
+  box-shadow:0 0 35px rgba(37,211,102,.85);
+}
+footer{
+  background:#020b16;
+  color:#aac8e8;
+  text-align:center;
+  padding:28px;
+}
+@media(max-width:760px){
+  .header{padding:12px 5%}
+  .brand img{width:48px;height:48px}
+  .brand strong{font-size:17px}
+  .brand span{font-size:12px}
+  .hero{padding:120px 6% 60px}
+  .hero h1{font-size:40px}
+  .hero p{font-size:17px}
+  .title h2{font-size:34px}
+  .photo img{height:230px}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-  <div style="display:flex;align-items:center;gap:10px;">
-    <img src="logo.jpg">
-    <h2>Cargas Molina Panamá</h2>
+<header class="header">
+  <div class="brand">
+    <img src="logo.jpg" alt="Cargas Molina Panamá">
+    <div>
+      <strong>Cargas Molina Panamá</strong><br>
+      <span>Transporte y logística profesional</span>
+    </div>
   </div>
 
-  <a class="btn" onclick="convertir()" href="https://wa.me/50769035879">Cotizar</a>
+  <a class="btn" href="https://wa.me/50769035879?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20transporte."
+     onclick="return gtag_report_conversion(this.href)">Cotizar</a>
 </header>
 
 <section class="hero">
-  <div class="hero-box">
-    <h1>Transporte de carga en Panamá</h1>
-    <p>Servicio rápido, seguro y confiable</p>
+  <div class="hero-content">
+    <div class="badge">🚚 Panamá y Centroamérica</div>
+    <h1>Transporte de carga <span>rápido, seguro y profesional</span></h1>
+    <p>Carga pesada, liviana, seca, refrigerada, mulas, madrinas, cama baja, camiones, H1, pickup y bus. Atención directa para empresas y particulares.</p>
 
-    <a class="btn" onclick="convertir()" href="https://wa.me/50769035879">
-      Cotizar por WhatsApp
-    </a>
+    <div class="hero-actions">
+      <a class="btn" href="https://wa.me/50769035879?text=Hola,%20necesito%20una%20cotización.%20Origen:%20Destino:%20Tipo%20de%20carga:%20Fecha:"
+         onclick="return gtag_report_conversion(this.href)">Cotizar por WhatsApp</a>
+      <a class="btn-secondary" href="#servicios">Ver servicios</a>
+    </div>
+
+    <div class="trust">
+      <div>✅ Atención inmediata</div>
+      <div>✅ Cobertura nacional</div>
+      <div>✅ Flota variada</div>
+    </div>
   </div>
 </section>
 
-<section class="section">
-  <h2>Servicios</h2>
+<section id="servicios">
+  <div class="title">
+    <h2>Servicios</h2>
+    <p>Soluciones de transporte para cada necesidad.</p>
+  </div>
 
   <div class="grid">
-    <div class="card"><h3>Carga pesada y liviana</h3></div>
-    <div class="card"><h3>Carga seca y refrigerada</h3></div>
-    <div class="card"><h3>Camiones 26, 24, 20, 18, 17, 16</h3></div>
-    <div class="card"><h3>Mulas, madrinas, cama baja</h3></div>
-    <div class="card"><h3>H1, Pickup, Bus</h3></div>
+    <div class="card"><h3>Carga pesada y liviana</h3><p>Movemos mercancía general, materiales, equipos y carga comercial.</p></div>
+    <div class="card"><h3>Carga seca y refrigerada</h3><p>Transporte responsable para carga seca y temperatura controlada.</p></div>
+    <div class="card"><h3>Camiones 26, 24, 20, 18, 17 y 16</h3><p>Opciones según volumen, ruta y tipo de mercancía.</p></div>
+    <div class="card"><h3>Mulas, madrinas y cama baja</h3><p>Transporte especializado para carga pesada y maquinaria.</p></div>
+    <div class="card"><h3>H1, pickup y bus</h3><p>Servicios rápidos, ligeros, privados y empresariales.</p></div>
+    <div class="card"><h3>Logística regional</h3><p>Coordinación para Panamá y Centroamérica según disponibilidad.</p></div>
   </div>
 </section>
 
-<section class="section gallery">
-  <h2>Flota</h2>
+<section>
+  <div class="title">
+    <h2>Flota real</h2>
+    <p>Imágenes reales para generar confianza antes de cotizar.</p>
+  </div>
 
   <div class="grid">
-    <img src="Camion.jpg">
-    <img src="camion1.jpg">
-    <img src="carga.jpg">
-    <img src="flota.jpg">
-    <img src="trabajo.jpg">
+    <div class="photo"><img src="Camionrojo1.jpg" alt="Camión rojo de carga"><h3>Camión rojo de carga</h3></div>
+    <div class="photo"><img src="Camionrojo2.jpg" alt="Mula roja"><h3>Mula para carga pesada</h3></div>
+    <div class="photo"><img src="Camionblanco1.webp" alt="Camión blanco"><h3>Camión de carga cerrada</h3></div>
+    <div class="photo"><img src="Camionpequeño1.jpg" alt="Camión pequeño"><h3>Camión liviano</h3></div>
+    <div class="photo"><img src="carga.jpg" alt="Carga comercial"><h3>Carga comercial</h3></div>
+    <div class="photo"><img src="trabajo.jpg" alt="Equipo trabajando"><h3>Operación y trabajo</h3></div>
   </div>
 </section>
 
-<section class="section cover">
-  <h2>Cubrimos todo Panamá</h2>
+<section>
+  <div class="title">
+    <h2>Operaciones reales</h2>
+    <p>Video de nuestra operación en ruta y carga.</p>
+  </div>
 
-  <div>
-    <span>Ciudad de Panamá</span>
-    <span>Colón - Zona Libre</span>
-    <span>Arraiján - Chorrera</span>
-    <span>Coclé - Penonomé</span>
-    <span>Santiago - Herrera</span>
-    <span>David - Chiriquí</span>
-    <span>Centroamérica</span>
+  <div class="video-box">
+    <video controls muted preload="metadata">
+      <source src="Videocaion1.mp4" type="video/mp4">
+      Tu navegador no soporta video.
+    </video>
   </div>
 </section>
 
-<section class="section">
-  <h2>¿Por qué elegirnos?</h2>
+<section>
+  <div class="coverage">
+    <h2>Cubrimos todo Panamá</h2>
+    <p>Servicio nacional y coordinación hacia Centroamérica.</p>
+
+    <div class="zones">
+      <span>Ciudad de Panamá</span>
+      <span>Colón - Zona Libre</span>
+      <span>Arraiján</span>
+      <span>La Chorrera</span>
+      <span>Coclé</span>
+      <span>Penonomé</span>
+      <span>Santiago</span>
+      <span>Herrera</span>
+      <span>David</span>
+      <span>Chiriquí</span>
+      <span>Centroamérica</span>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="title">
+    <h2>¿Por qué elegirnos?</h2>
+  </div>
 
   <div class="grid">
-    <div class="card">✔ Entregas rápidas</div>
-    <div class="card">✔ Personal capacitado</div>
-    <div class="card">✔ Precios competitivos</div>
-    <div class="card">✔ Atención inmediata</div>
+    <div class="card"><h3>Respuesta rápida</h3><p>Atención directa por WhatsApp para cotizaciones claras.</p></div>
+    <div class="card"><h3>Flota variada</h3><p>Opciones para carga ligera, pesada, comercial y especializada.</p></div>
+    <div class="card"><h3>Rutas nacionales</h3><p>Cobertura en las principales zonas logísticas del país.</p></div>
+    <div class="card"><h3>Servicio confiable</h3><p>Coordinación responsable desde el primer contacto hasta la entrega.</p></div>
   </div>
 </section>
 
-<section class="section" style="text-align:center;">
-  <h2>Solicita tu cotización</h2>
+<section class="cta">
+  <h2>Solicita tu cotización ahora</h2>
+  <p>Envíanos origen, destino, tipo de carga y fecha aproximada.</p>
 
-  <a class="btn" onclick="convertir()" href="https://wa.me/50769035879">
-    Hablar por WhatsApp
-  </a>
+  <a class="btn" href="https://wa.me/50769035879?text=Hola,%20quiero%20cotizar.%20Origen:%20Destino:%20Tipo%20de%20carga:%20Fecha:"
+     onclick="return gtag_report_conversion(this.href)">Hablar por WhatsApp</a>
 
-  <p>info@cargasmolina.com</p>
-  <p>+507 6903-5879</p>
+  <p style="margin-top:18px;">info@cargasmolina.com | +507 6903-5879</p>
 </section>
 
-<a class="float" onclick="convertir()" href="https://wa.me/50769035879">☎</a>
+<a class="float" href="https://wa.me/50769035879?text=Hola,%20quiero%20cotizar%20un%20servicio%20de%20transporte."
+   onclick="return gtag_report_conversion(this.href)">☎</a>
 
 <footer>
-  © 2026 Cargas Molina Panamá
+  © 2026 Cargas Molina Panamá. Transporte y logística profesional.
 </footer>
 
 </body>
