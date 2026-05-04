@@ -7,231 +7,191 @@
 
 <style>
 body{
-margin:0;
-font-family:Arial;
-background:#0b1f3a;
-color:white;
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#0b1e3c;
+    color:white;
 }
 
-/* HEADER */
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 20px;
-background:#08162a;
-position:sticky;
-top:0;
-z-index:1000;
+/* NAV */
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 30px;
+    background:#0a1a33;
 }
 
 .logo{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.logo img{
-width:40px;
+    font-weight:bold;
+    font-size:18px;
 }
 
 .btn{
-background:#25D366;
-padding:10px 18px;
-border-radius:25px;
-color:white;
-text-decoration:none;
-font-weight:bold;
+    background:#2ecc71;
+    padding:10px 20px;
+    border-radius:25px;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
 }
 
 /* HERO */
 .hero{
-background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('portada.jpg');
-background-size:cover;
-background-position:center;
-text-align:center;
-padding:100px 20px;
+    height:400px;
+    background:url('portada.jpg') center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
 }
 
 .hero h1{
-color:#ffd54f;
-font-size:32px;
-margin-bottom:10px;
+    font-size:36px;
+    color:#f1c40f;
 }
 
 .hero p{
-margin-bottom:20px;
+    font-size:18px;
+}
+
+.hero .btn{
+    margin-top:15px;
+    display:inline-block;
 }
 
 /* SECCIONES */
 .section{
-padding:40px 20px;
-text-align:center;
+    padding:40px 20px;
+    text-align:center;
 }
 
+/* SERVICIOS */
 .grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:15px;
-margin-top:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:15px;
+    margin-top:20px;
 }
 
 .card{
-background:#122c55;
-border-radius:10px;
-overflow:hidden;
-box-shadow:0 4px 10px rgba(0,0,0,0.4);
-}
-
-.card img{
-width:100%;
-height:180px;
-object-fit:cover;
-}
-
-.card h3{
-margin:0;
-padding:12px;
-background:#0d6efd;
+    background:linear-gradient(135deg,#00c6ff,#0072ff);
+    padding:15px;
+    border-radius:10px;
 }
 
 /* BENEFICIOS */
-.benefits{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:10px;
-margin-top:20px;
+.beneficios{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:10px;
+    margin-top:20px;
 }
 
-.benefits div{
-background:#1a3a6e;
-padding:10px 15px;
-border-radius:20px;
-}
-
-/* CTA */
-.cta{
-background:#08162a;
-padding:40px 20px;
-text-align:center;
-}
-
-/* BOTÓN WHATSAPP FLOTANTE */
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-width:60px;
-height:60px;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:30px;
-color:white;
-text-decoration:none;
+.beneficios div{
+    background:#1b2f55;
+    padding:10px 15px;
+    border-radius:20px;
 }
 
 /* FOOTER */
 footer{
-text-align:center;
-padding:20px;
-font-size:14px;
-background:#08162a;
+    text-align:center;
+    padding:20px;
+    background:#061427;
+}
+
+/* BOTÓN WHATSAPP */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25d366;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    color:white;
+    text-decoration:none;
 }
 </style>
-</head>
 
+</head>
 <body>
 
-<header>
-<div class="logo">
-<img src="logo.jpg">
-<strong>Cargas Molina Panamá</strong>
-</div>
+<!-- NAV -->
+<nav>
+    <div class="logo">Cargas Molina Panamá</div>
+    <a href="https://wa.me/507XXXXXXXX" class="btn">Cotizar</a>
+</nav>
 
-<a href="https://wa.me/50769035879" class="btn">
-Cotizar
-</a>
-</header>
-
+<!-- HERO -->
 <section class="hero">
-<h1>Transporte de Carga en Panamá</h1>
-<p>Servicio rápido, seguro y confiable</p>
-
-<a href="https://wa.me/50769035879" class="btn">
-Cotiza Ahora
-</a>
+    <div>
+        <h1>Transporte de Carga en Panamá</h1>
+        <p>Servicio rápido, seguro y confiable</p>
+        <a href="https://wa.me/507XXXXXXXX" class="btn">Cotiza Ahora</a>
+    </div>
 </section>
 
+<!-- SERVICIOS -->
 <section class="section">
-<h2>Flota y operaciones</h2>
-<p>Fotos reales para generar confianza</p>
+    <h2>Servicios</h2>
 
-<div class="grid">
-
-<div class="card">
-<img src="camion1.jpg">
-<h3>Camión en ruta</h3>
-</div>
-
-<div class="card">
-<img src="Camion.jpg">
-<h3>Transporte de carga</h3>
-</div>
-
-<div class="card">
-<img src="carga.jpg">
-<h3>Carga comercial</h3>
-</div>
-
-<div class="card">
-<img src="trabajo.jpg">
-<h3>Equipo trabajando</h3>
-</div>
-
-<div class="card">
-<img src="flota.jpg">
-<h3>Flota disponible</h3>
-</div>
-
-<div class="card">
-<img src="image-7.jpg">
-<h3>Operaciones reales</h3>
-</div>
-
-</div>
+    <div class="grid">
+        <div class="card">Carga pesada y liviana</div>
+        <div class="card">Carga seca y refrigerada</div>
+        <div class="card">Camiones 26, 24, 20, 18, 17, 16</div>
+        <div class="card">Mulas, madrinas, cama baja</div>
+        <div class="card">H1, Pickup, Bus</div>
+        <div class="card">Cobertura nacional</div>
+    </div>
 </section>
 
+<!-- COBERTURA -->
 <section class="section">
-<h2>¿Por qué elegirnos?</h2>
+    <h2>Cubrimos todo Panamá</h2>
 
-<div class="benefits">
-<div>✔ Entregas rápidas</div>
-<div>✔ Personal capacitado</div>
-<div>✔ Precios competitivos</div>
-<div>✔ Atención inmediata</div>
-</div>
-
+    <div class="grid">
+        <div class="card">Ciudad de Panamá</div>
+        <div class="card">Colón - Zona Libre</div>
+        <div class="card">Arraiján y Chorrera</div>
+        <div class="card">Coclé - Penonomé</div>
+        <div class="card">Santiago - Herrera</div>
+        <div class="card">David - Chiriquí</div>
+        <div class="card">Centroamérica</div>
+    </div>
 </section>
 
-<section class="cta">
-<h2>Solicita tu cotización ahora</h2>
+<!-- BENEFICIOS -->
+<section class="section">
+    <h2>¿Por qué elegirnos?</h2>
 
-<a href="https://wa.me/50769035879" class="btn">
-Hablar por WhatsApp
-</a>
+    <div class="beneficios">
+        <div>✔ Entregas rápidas</div>
+        <div>✔ Personal capacitado</div>
+        <div>✔ Precios competitivos</div>
+        <div>✔ Atención inmediata</div>
+    </div>
 </section>
 
-<a href="https://wa.me/50769035879" class="whatsapp">
-📞
-</a>
+<!-- CTA FINAL -->
+<section class="section">
+    <h2>Solicita tu cotización ahora</h2>
+    <a href="https://wa.me/507XXXXXXXX" class="btn">Hablar por WhatsApp</a>
+</section>
 
+<!-- FOOTER -->
 <footer>
-© 2026 Cargas Molina Panamá
+    © 2026 Cargas Molina Panamá
 </footer>
+
+<!-- BOTÓN WHATSAPP -->
+<a href="https://wa.me/507XXXXXXXX" class="whatsapp">📞</a>
 
 </body>
 </html>
