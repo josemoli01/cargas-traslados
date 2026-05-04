@@ -1,502 +1,255 @@
-<!DOCTYPE html><html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cargas Molina Panamá | Transporte, Fletes y Logística</title>
-  <meta name="description" content="Transporte de carga, fletes, mudanzas, contenedores y logística en Panamá y Centroamérica. Cotiza rápido por WhatsApp con Cargas Molina Panamá." />  <!-- Google Ads / Google Tag -->  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18121442049"></script>  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-18121442049');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cargas Molina Panamá | Transporte y Logística Profesional</title>
 
-    const WHATSAPP_URL = "https://wa.me/50769035879?text=Hola%20Cargas%20Molina%20Panam%C3%A1.%20Necesito%20cotizar%20un%20servicio%20de%20transporte.%0A%0AOrigen:%0ADestino:%0ATipo%20de%20carga:%0AFecha:%0A";
+<!-- Google Ads -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18121442049"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-18121442049');
+</script>
 
-    function cotizarWhatsApp() {
-      if (typeof gtag === 'function') {
-        gtag('event', 'conversion', {
-          'send_to': 'AW-18121442049/LKHCLL-laycEIGG_cBD',
-          'event_callback': function(){ window.location.href = WHATSAPP_URL; }
-        });
-      }
-      setTimeout(function(){ window.location.href = WHATSAPP_URL; }, 600);
-      return false;
-    }
-  </script>  <style>
-    :root {
-      --dark: #04101f;
-      --blue: #063a8c;
-      --blue2: #0676ff;
-      --cyan: #00d6ff;
-      --green: #25d366;
-      --green2: #13b958;
-      --gold: #ffd45a;
-      --white: #ffffff;
-      --text: #eaf4ff;
-      --muted: #bcd4f6;
-      --card: rgba(255,255,255,.09);
-      --line: rgba(255,255,255,.16);
-      --shadow: 0 20px 60px rgba(0,0,0,.32);
-    }
+<style>
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#0b1f3a;
+color:white;
+}
 
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: linear-gradient(180deg, #030814 0%, #071d45 45%, #052b66 75%, #04101f 100%);
-      color: var(--white);
-    }
-    a { color: inherit; text-decoration: none; }
-    img, video { max-width: 100%; display: block; }
-    .container { width: min(1150px, 92%); margin: auto; }
+/* HEADER */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+background:#08162a;
+position:sticky;
+top:0;
+z-index:1000;
+}
 
-    header {
-      position: fixed;
-      top: 0; left: 0; right: 0;
-      z-index: 1000;
-      background: rgba(4, 16, 31, .92);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--line);
-    }
-    .nav {
-      height: 78px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      font-weight: 900;
-      line-height: 1.05;
-    }
-    .brand img {
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 1px solid var(--line);
-      background: #09224d;
-    }
-    .brand span { display: block; font-size: 19px; }
-    .brand small { display: block; color: #8fdcff; font-size: 13px; margin-top: 4px; }
+.logo{
+font-size:18px;
+font-weight:bold;
+}
 
-    .btn, .top-btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 9px;
-      border: none;
-      cursor: pointer;
-      font-weight: 900;
-      border-radius: 999px;
-      background: var(--green);
-      color: #03140a;
-      box-shadow: 0 14px 35px rgba(37, 211, 102, .35);
-      transition: transform .18s ease, background .18s ease;
-    }
-    .btn { padding: 17px 26px; font-size: 18px; }
-    .top-btn { padding: 14px 23px; font-size: 16px; }
-    .btn:hover, .top-btn:hover { transform: translateY(-2px); background: #35e87a; }
+.btn{
+background:#25D366;
+padding:12px 20px;
+border-radius:30px;
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
 
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      padding: 116px 0 70px;
-      overflow: hidden;
-    }
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, rgba(3,8,20,.95), rgba(5,35,91,.78), rgba(3,8,20,.82));
-      z-index: 1;
-    }
-    .hero-bg {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: .62;
-    }
-    .hero-grid {
-      position: relative;
-      z-index: 2;
-      display: grid;
-      grid-template-columns: 1.07fr .93fr;
-      gap: 34px;
-      align-items: center;
-    }
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border: 1px solid rgba(255,212,90,.35);
-      background: rgba(255,212,90,.13);
-      color: var(--gold);
-      border-radius: 999px;
-      padding: 9px 15px;
-      font-weight: 900;
-      margin-bottom: 18px;
-    }
-    h1 {
-      margin: 0 0 18px;
-      font-size: clamp(38px, 6vw, 76px);
-      line-height: .96;
-      letter-spacing: -2px;
-      font-weight: 1000;
-    }
-    h1 span { color: var(--gold); }
-    .sub {
-      margin: 0 0 24px;
-      color: var(--text);
-      font-size: clamp(18px, 2vw, 23px);
-      line-height: 1.35;
-      max-width: 780px;
-    }
-    .trust {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 20px;
-    }
-    .trust span {
-      background: rgba(255,255,255,.12);
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 10px 13px;
-      color: #f2f8ff;
-      font-weight: 800;
-      font-size: 14px;
-    }
-    .quote {
-      background: rgba(255,255,255,.12);
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      padding: 26px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(15px);
-    }
-    .quote h2 { color: var(--gold); font-size: 30px; margin: 0 0 10px; }
-    .quote p { color: var(--text); line-height: 1.45; margin: 0 0 16px; }
-    .quote-list { display: grid; gap: 11px; margin: 18px 0; }
-    .quote-list div {
-      background: rgba(0,0,0,.24);
-      border: 1px solid var(--line);
-      border-radius: 15px;
-      padding: 13px 14px;
-      font-weight: 800;
-    }
+/* HERO */
+.hero{
+background:url('https://images.unsplash.com/photo-1601582589907-f92af5ed9db8') center/cover;
+padding:80px 20px;
+text-align:center;
+}
 
-    section { padding: 78px 0; }
-    .title { text-align: center; margin-bottom: 36px; }
-    .title h2 { color: var(--gold); font-size: clamp(34px, 4vw, 52px); line-height: 1; margin: 0 0 12px; }
-    .title p { color: var(--text); font-size: 18px; margin: 0; }
+.hero h1{
+font-size:36px;
+color:#ffd54f;
+}
 
-    .proof { padding: 34px 0; background: linear-gradient(90deg, #0a58d6, #0cc67b); }
-    .proof-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; text-align: center; }
-    .metric { font-size: 34px; font-weight: 1000; }
-    .metric small { display: block; font-size: 14px; color: #f1fff8; margin-top: 5px; }
+.hero p{
+font-size:18px;
+margin-bottom:20px;
+}
 
-    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .service-card {
-      background: linear-gradient(180deg, rgba(31,100,210,.75), rgba(9,35,89,.95));
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 24px;
-      min-height: 205px;
-      box-shadow: var(--shadow);
-    }
-    .service-card h3 { font-size: 24px; margin: 0 0 14px; }
-    .service-card ul { margin: 0; padding: 0; list-style: none; color: #eef6ff; line-height: 1.85; font-weight: 700; }
+/* SECCIONES */
+.section{
+padding:40px 20px;
+max-width:1100px;
+margin:auto;
+}
 
-    .process-wrap { background: rgba(0,0,0,.18); }
-    .process { display: grid; grid-template-columns: 1fr 1fr; gap: 26px; align-items: center; }
-    .steps { display: grid; gap: 14px; }
-    .step {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-      background: rgba(255,255,255,.09);
-      border: 1px solid var(--line);
-      border-radius: 18px;
-      padding: 17px;
-    }
-    .num {
-      min-width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      display: grid;
-      place-items: center;
-      background: var(--gold);
-      color: #061020;
-      font-weight: 1000;
-    }
-    .step b { font-size: 18px; }
-    .step span { color: var(--muted); display: block; margin-top: 4px; line-height: 1.4; }
-    .video-box {
-      position: relative;
-      background: #061020;
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-    .video-box video { width: 100%; aspect-ratio: 16/10; object-fit: cover; }
-    .video-label {
-      position: absolute;
-      left: 16px;
-      bottom: 16px;
-      background: rgba(0,0,0,.62);
-      border: 1px solid var(--line);
-      border-radius: 14px;
-      padding: 12px 14px;
-      font-weight: 900;
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
 
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 18px;
-    }
-    .photo-card {
-      background: #0a285d;
-      border: 1px solid var(--line);
-      border-radius: 22px;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-    }
-    .photo-card img {
-      width: 100%;
-      height: 220px;
-      object-fit: cover;
-      background: #061c41;
-    }
-    .photo-card h3 {
-      margin: 0;
-      padding: 14px;
-      min-height: 58px;
-      display: flex;
-      align-items: center;
-      color: #fff;
-      font-size: 17px;
-      background: linear-gradient(90deg, #00c6ff, #006eff);
-    }
+/* TARJETAS */
+.card{
+background:#122c55;
+border-radius:15px;
+overflow:hidden;
+transition:0.3s;
+}
 
-    .coverage-wrap { background: rgba(0,0,0,.18); }
-    .coverage { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-    .panel {
-      background: rgba(255,255,255,.09);
-      border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 24px;
-    }
-    .panel h3 { font-size: 28px; margin: 0 0 14px; }
-    .panel p { color: var(--text); line-height: 1.8; font-size: 17px; }
-    .map { margin-top: 22px; border-radius: 22px; overflow: hidden; border: 1px solid var(--line); }
-    .map iframe { width: 100%; height: 330px; border: 0; }
+.card:hover{
+transform:scale(1.05);
+}
 
-    .final { text-align: center; background: radial-gradient(circle at top, #0d63d7, #061020 65%); }
-    .final h2 { color: var(--gold); font-size: clamp(36px, 5vw, 62px); margin: 0 0 12px; line-height: 1; }
-    .final p { font-size: 20px; color: var(--text); margin: 0 0 24px; }
+.card img{
+width:100%;
+height:180px;
+object-fit:cover;
+}
 
-    footer { text-align: center; color: #bfd2ef; padding: 28px 0; background: #030711; }
-    .float-wa {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      z-index: 1200;
-      width: 68px;
-      height: 68px;
-      border-radius: 50%;
-      background: var(--green);
-      display: grid;
-      place-items: center;
-      color: #fff;
-      font-size: 34px;
-      box-shadow: 0 18px 45px rgba(37,211,102,.42);
-      animation: pulse 1.7s infinite;
-    }
-    @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.08)} }
+.card h3{
+margin:0;
+padding:10px;
+background:linear-gradient(90deg,#00c6ff,#0072ff);
+}
 
-    @media (max-width: 900px) {
-      .container { width: 91%; }
-      .nav { height: 72px; }
-      .brand img { width: 48px; height: 48px; }
-      .brand span { font-size: 18px; }
-      .brand small { font-size: 12px; }
-      .top-btn { padding: 13px 20px; font-size: 16px; max-width: 260px; }
-      .hero { padding: 105px 0 60px; }
-      .hero-grid, .process, .coverage { grid-template-columns: 1fr; }
-      .service-grid { grid-template-columns: 1fr; }
-      .proof-grid { grid-template-columns: repeat(2, 1fr); }
-      .gallery { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-      .photo-card img { height: 180px; }
-      .photo-card h3 { font-size: 15px; min-height: 52px; }
-    }
+/* BENEFICIOS */
+.benefits{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+text-align:center;
+}
 
-    @media (max-width: 520px) {
-      .top-btn { padding: 12px 16px; font-size: 15px; }
-      .brand span { font-size: 17px; }
-      .brand small { font-size: 12px; }
-      .gallery { grid-template-columns: 1fr; }
-      .photo-card img { height: 230px; }
-      .float-wa { width: 62px; height: 62px; font-size: 30px; }
-    }
-  </style></head>
+.benefit{
+background:#122c55;
+padding:20px;
+border-radius:10px;
+}
+
+/* CTA FINAL */
+.cta{
+text-align:center;
+padding:60px 20px;
+background:#08162a;
+}
+
+.cta h2{
+margin-bottom:20px;
+}
+
+/* BOTÓN FLOTANTE */
+.float{
+position:fixed;
+bottom:20px;
+right:20px;
+background:#25D366;
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:25px;
+color:white;
+text-decoration:none;
+}
+
+/* FOOTER */
+footer{
+text-align:center;
+padding:20px;
+font-size:14px;
+background:#08162a;
+}
+</style>
+</head>
+
 <body>
-  <header>
-    <div class="container nav">
-      <a class="brand" href="#inicio">
-        <img src="logo.jpg" alt="Cargas Molina Panamá" />
-        <div>
-          <span>Cargas Molina Panamá</span>
-          <small>Transporte y logística profesional</small>
-        </div>
-      </a>
-      <a class="top-btn" href="#" onclick="return cotizarWhatsApp()">Cotizar por WhatsApp</a>
-    </div>
-  </header>  <main id="inicio" class="hero">
-    <video class="hero-bg" autoplay muted loop playsinline poster="portada.jpg">
-      <source src="video.mp4" type="video/mp4" />
-    </video><div class="container hero-grid">
-  <div>
-    <div class="badge">🚛 Panamá y Centroamérica</div>
-    <h1>Transporte de carga en Panamá <span>rápido y seguro</span></h1>
-    <p class="sub">Fletes, mudanzas, contenedores y logística para empresas y particulares. Cotiza en minutos por WhatsApp con atención directa.</p>
-    <a class="btn" href="#" onclick="return cotizarWhatsApp()">📲 Cotizar ahora</a>
-    <div class="trust">
-      <span>⚡ Respuesta rápida</span>
-      <span>✅ Cobertura nacional</span>
-      <span>🌎 Alcance regional</span>
-      <span>📦 Carga liviana y pesada</span>
-    </div>
-  </div>
 
-  <aside class="quote">
-    <h2>Te cotizamos rápido</h2>
-    <p>Para darte precio exacto, envíanos por WhatsApp estos datos:</p>
-    <div class="quote-list">
-      <div>📍 Origen y destino</div>
-      <div>📦 Tipo de carga</div>
-      <div>🚛 Tipo de unidad requerida</div>
-      <div>📅 Fecha aproximada</div>
-    </div>
-    <a class="btn" style="width:100%" href="#" onclick="return cotizarWhatsApp()">Enviar datos por WhatsApp</a>
-  </aside>
+<header>
+<div class="logo">Cargas Molina Panamá</div>
+
+<a href="https://wa.me/50769035879"
+onclick="return gtag_report_conversion('https://wa.me/50769035879');"
+class="btn">
+Cotizar
+</a>
+</header>
+
+<section class="hero">
+<h1>Transporte de Carga en Panamá</h1>
+<p>Servicio rápido, seguro y confiable para empresas y mudanzas</p>
+
+<a href="https://wa.me/50769035879"
+onclick="return gtag_report_conversion('https://wa.me/50769035879');"
+class="btn">
+Cotiza Ahora
+</a>
+</section>
+
+<section class="section">
+<h2>Servicios</h2>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1601582589907-f92af5ed9db8">
+<h3>Camión en ruta</h3>
 </div>
 
-  </main>  <section class="proof">
-    <div class="container proof-grid">
-      <div class="metric">24/7<small>Atención por WhatsApp</small></div>
-      <div class="metric">PA<small>Cobertura nacional</small></div>
-      <div class="metric">CA<small>Centroamérica</small></div>
-      <div class="metric">PRO<small>Servicio empresarial</small></div>
-    </div>
-  </section>  <section id="servicios">
-    <div class="container">
-      <div class="title">
-        <h2>Servicios principales</h2>
-        <p>Soluciones de transporte y logística adaptadas a cada necesidad.</p>
-      </div><div class="service-grid">
-    <div class="service-card"><h3>Fletes y transporte</h3><ul><li>✓ Carga liviana y pesada</li><li>✓ Fletes locales y nacionales</li><li>✓ Distribución comercial</li></ul></div>
-    <div class="service-card"><h3>Mudanzas</h3><ul><li>✓ Residenciales y comerciales</li><li>✓ Atención rápida</li><li>✓ Coordinación responsable</li></ul></div>
-    <div class="service-card"><h3>Contenedores</h3><ul><li>✓ Chasis y traslados</li><li>✓ Operaciones portuarias</li><li>✓ Coordinación logística</li></ul></div>
-    <div class="service-card"><h3>Carga refrigerada</h3><ul><li>✓ Temperatura controlada</li><li>✓ Entrega responsable</li><li>✓ Apoyo comercial</li></ul></div>
-    <div class="service-card"><h3>Carga especial</h3><ul><li>✓ Mula, madrina y cama baja</li><li>✓ Maquinaria y equipos</li><li>✓ Carga pesada</li></ul></div>
-    <div class="service-card"><h3>Flota disponible</h3><ul><li>✓ Camión 26, 24, 20, 18 y 17</li><li>✓ H1, pickup y bus</li><li>✓ Servicios express</li></ul></div>
-  </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d">
+<h3>Transporte de contenedor</h3>
 </div>
 
-  </section>  <section class="process-wrap">
-    <div class="container process">
-      <div>
-        <div class="title" style="text-align:left">
-          <h2>Proceso rápido</h2>
-          <p>Diseñado para que el cliente cotice y coordine sin complicaciones.</p>
-        </div>
-        <div class="steps">
-          <div class="step"><div class="num">1</div><div><b>Escríbenos por WhatsApp</b><span>Indica origen, destino y tipo de carga.</span></div></div>
-          <div class="step"><div class="num">2</div><div><b>Recibe cotización</b><span>Te damos precio según distancia, unidad y necesidad.</span></div></div>
-          <div class="step"><div class="num">3</div><div><b>Confirmamos disponibilidad</b><span>Coordinamos el equipo adecuado.</span></div></div>
-          <div class="step"><div class="num">4</div><div><b>Movemos tu carga</b><span>Seguimiento y atención profesional.</span></div></div>
-        </div>
-      </div><div class="video-box">
-    <video autoplay muted loop playsinline poster="portada.jpg">
-      <source src="video2.mp4" type="video/mp4" />
-    </video>
-    <div class="video-label">🚛 Trabajo real en Panamá</div>
-  </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec">
+<h3>Carga comercial</h3>
 </div>
 
-  </section>  <section id="galeria">
-    <div class="container">
-      <div class="title">
-        <h2>Flota y operaciones</h2>
-        <p>Fotos reales para generar confianza antes de cotizar.</p>
-      </div><div class="gallery">
-    <div class="photo-card">
-      <img src="camion.jpg" alt="Camión en ruta" />
-      <h3>Camión en ruta</h3>
-    </div>
-
-    <div class="photo-card">
-      <img src="contenedor.jpg" alt="Transporte de contenedor" />
-      <h3>Transporte de contenedor</h3>
-    </div>
-
-    <div class="photo-card">
-      <img src="carga.jpg" alt="Carga comercial" />
-      <h3>Carga comercial</h3>
-    </div>
-
-    <div class="photo-card">
-      <img src="personas.jpg" alt="Equipo cargando mercancía" />
-      <h3>Equipo cargando mercancía</h3>
-    </div>
-  </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178">
+<h3>Equipo cargando mercancía</h3>
 </div>
 
-  </section>  <section class="coverage-wrap" id="cobertura">
-    <div class="container">
-      <div class="title">
-        <h2>Cobertura</h2>
-        <p>Atendemos Panamá y coordinamos rutas hacia Centroamérica.</p>
-      </div><div class="coverage">
-    <div class="panel">
-      <h3>Panamá</h3>
-      <p>📍 Ciudad de Panamá<br>📍 Colón<br>📍 La Chorrera<br>📍 Coclé<br>📍 Provincias Centrales<br>📍 Chiriquí</p>
-    </div>
-
-    <div class="panel">
-      <h3>Centroamérica</h3>
-      <p>📍 Conexiones logísticas regionales<br>📍 Rutas coordinadas según necesidad<br>📍 Apoyo comercial y distribución<br>📍 Atención orientada a negocios</p>
-    </div>
-  </div>
-
-  <div class="map">
-    <iframe loading="lazy" src="https://www.google.com/maps?q=Panam%C3%A1&output=embed"></iframe>
-  </div>
 </div>
+</section>
 
-  </section>  <section class="final">
-    <div class="container">
-      <h2>¿Necesitas transporte hoy?</h2>
-      <p>Escríbenos ahora y recibe cotización rápida por WhatsApp.</p>
-      <a class="btn" href="#" onclick="return cotizarWhatsApp()">📲 Cotizar ahora</a>
-    </div>
-  </section>  <footer>
-    <div class="container">
-      <p><b>Cargas Molina Panamá</b> · Transporte y logística profesional</p>
-      <p>WhatsApp: +507 6903-5879 · Email: info@cargasmolina.com · Panamá y Centroamérica</p>
-      <p>© 2026 Cargas Molina Panamá. Todos los derechos reservados.</p>
-    </div>
-  </footer><a class="float-wa" href="#" onclick="return cotizarWhatsApp()" aria-label="Cotizar por WhatsApp">☎</a>
+<section class="section">
+<h2>¿Por qué elegirnos?</h2>
+
+<div class="benefits">
+<div class="benefit">✔ Entregas rápidas</div>
+<div class="benefit">✔ Personal capacitado</div>
+<div class="benefit">✔ Precios competitivos</div>
+<div class="benefit">✔ Atención inmediata</div>
+</div>
+</section>
+
+<section class="cta">
+<h2>Solicita tu cotización ahora mismo</h2>
+
+<a href="https://wa.me/50769035879"
+onclick="return gtag_report_conversion('https://wa.me/50769035879');"
+class="btn">
+Hablar por WhatsApp
+</a>
+</section>
+
+<footer>
+© 2026 Cargas Molina Panamá
+</footer>
+
+<!-- BOTÓN FLOTANTE -->
+<a href="https://wa.me/50769035879"
+onclick="return gtag_report_conversion('https://wa.me/50769035879');"
+class="float">☎</a>
+
+<!-- CONVERSIÓN -->
+<script>
+function gtag_report_conversion(url) {
+var callback = function () {
+if (typeof(url) != 'undefined') {
+window.location = url;
+}
+};
+gtag('event', 'conversion', {
+'send_to': 'AW-18121442049/_LKHCLL-laYcEIGG_cBD',
+'event_callback': callback
+});
+return false;
+}
+</script>
 
 </body>
 </html>
