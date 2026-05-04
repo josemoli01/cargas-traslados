@@ -3,21 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cargas Molina Panamá | Transporte y Logística Profesional</title>
-
-<!-- Google Ads -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18121442049"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'AW-18121442049');
-</script>
+<title>Cargas Molina Panamá</title>
 
 <style>
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:Arial;
 background:#0b1f3a;
 color:white;
 }
@@ -35,14 +26,19 @@ z-index:1000;
 }
 
 .logo{
-font-size:18px;
-font-weight:bold;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo img{
+width:40px;
 }
 
 .btn{
 background:#25D366;
-padding:12px 20px;
-border-radius:30px;
+padding:10px 18px;
+border-radius:25px;
 color:white;
 text-decoration:none;
 font-weight:bold;
@@ -50,44 +46,41 @@ font-weight:bold;
 
 /* HERO */
 .hero{
-background:url('https://images.unsplash.com/photo-1601582589907-f92af5ed9db8') center/cover;
-padding:80px 20px;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url('portada.jpg');
+background-size:cover;
+background-position:center;
 text-align:center;
+padding:100px 20px;
 }
 
 .hero h1{
-font-size:36px;
 color:#ffd54f;
+font-size:32px;
+margin-bottom:10px;
 }
 
 .hero p{
-font-size:18px;
 margin-bottom:20px;
 }
 
 /* SECCIONES */
 .section{
 padding:40px 20px;
-max-width:1100px;
-margin:auto;
+text-align:center;
 }
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+gap:15px;
+margin-top:20px;
 }
 
-/* TARJETAS */
 .card{
 background:#122c55;
-border-radius:15px;
+border-radius:10px;
 overflow:hidden;
-transition:0.3s;
-}
-
-.card:hover{
-transform:scale(1.05);
+box-shadow:0 4px 10px rgba(0,0,0,0.4);
 }
 
 .card img{
@@ -98,37 +91,34 @@ object-fit:cover;
 
 .card h3{
 margin:0;
-padding:10px;
-background:linear-gradient(90deg,#00c6ff,#0072ff);
+padding:12px;
+background:#0d6efd;
 }
 
 /* BENEFICIOS */
 .benefits{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-text-align:center;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:10px;
+margin-top:20px;
 }
 
-.benefit{
-background:#122c55;
-padding:20px;
-border-radius:10px;
+.benefits div{
+background:#1a3a6e;
+padding:10px 15px;
+border-radius:20px;
 }
 
-/* CTA FINAL */
+/* CTA */
 .cta{
-text-align:center;
-padding:60px 20px;
 background:#08162a;
+padding:40px 20px;
+text-align:center;
 }
 
-.cta h2{
-margin-bottom:20px;
-}
-
-/* BOTÓN FLOTANTE */
-.float{
+/* BOTÓN WHATSAPP FLOTANTE */
+.whatsapp{
 position:fixed;
 bottom:20px;
 right:20px;
@@ -139,7 +129,7 @@ border-radius:50%;
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:25px;
+font-size:30px;
 color:white;
 text-decoration:none;
 }
@@ -157,49 +147,59 @@ background:#08162a;
 <body>
 
 <header>
-<div class="logo">Cargas Molina Panamá</div>
+<div class="logo">
+<img src="logo.jpg">
+<strong>Cargas Molina Panamá</strong>
+</div>
 
-<a href="https://wa.me/50769035879"
-onclick="return gtag_report_conversion('https://wa.me/50769035879');"
-class="btn">
+<a href="https://wa.me/50769035879" class="btn">
 Cotizar
 </a>
 </header>
 
 <section class="hero">
 <h1>Transporte de Carga en Panamá</h1>
-<p>Servicio rápido, seguro y confiable para empresas y mudanzas</p>
+<p>Servicio rápido, seguro y confiable</p>
 
-<a href="https://wa.me/50769035879"
-onclick="return gtag_report_conversion('https://wa.me/50769035879');"
-class="btn">
+<a href="https://wa.me/50769035879" class="btn">
 Cotiza Ahora
 </a>
 </section>
 
 <section class="section">
-<h2>Servicios</h2>
+<h2>Flota y operaciones</h2>
+<p>Fotos reales para generar confianza</p>
 
 <div class="grid">
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1601582589907-f92af5ed9db8">
+<img src="camion1.jpg">
 <h3>Camión en ruta</h3>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d">
-<h3>Transporte de contenedor</h3>
+<img src="Camion.jpg">
+<h3>Transporte de carga</h3>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec">
+<img src="carga.jpg">
 <h3>Carga comercial</h3>
 </div>
 
 <div class="card">
-<img src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178">
-<h3>Equipo cargando mercancía</h3>
+<img src="trabajo.jpg">
+<h3>Equipo trabajando</h3>
+</div>
+
+<div class="card">
+<img src="flota.jpg">
+<h3>Flota disponible</h3>
+</div>
+
+<div class="card">
+<img src="image-7.jpg">
+<h3>Operaciones reales</h3>
 </div>
 
 </div>
@@ -209,47 +209,29 @@ Cotiza Ahora
 <h2>¿Por qué elegirnos?</h2>
 
 <div class="benefits">
-<div class="benefit">✔ Entregas rápidas</div>
-<div class="benefit">✔ Personal capacitado</div>
-<div class="benefit">✔ Precios competitivos</div>
-<div class="benefit">✔ Atención inmediata</div>
+<div>✔ Entregas rápidas</div>
+<div>✔ Personal capacitado</div>
+<div>✔ Precios competitivos</div>
+<div>✔ Atención inmediata</div>
 </div>
+
 </section>
 
 <section class="cta">
-<h2>Solicita tu cotización ahora mismo</h2>
+<h2>Solicita tu cotización ahora</h2>
 
-<a href="https://wa.me/50769035879"
-onclick="return gtag_report_conversion('https://wa.me/50769035879');"
-class="btn">
+<a href="https://wa.me/50769035879" class="btn">
 Hablar por WhatsApp
 </a>
 </section>
 
+<a href="https://wa.me/50769035879" class="whatsapp">
+📞
+</a>
+
 <footer>
 © 2026 Cargas Molina Panamá
 </footer>
-
-<!-- BOTÓN FLOTANTE -->
-<a href="https://wa.me/50769035879"
-onclick="return gtag_report_conversion('https://wa.me/50769035879');"
-class="float">☎</a>
-
-<!-- CONVERSIÓN -->
-<script>
-function gtag_report_conversion(url) {
-var callback = function () {
-if (typeof(url) != 'undefined') {
-window.location = url;
-}
-};
-gtag('event', 'conversion', {
-'send_to': 'AW-18121442049/_LKHCLL-laYcEIGG_cBD',
-'event_callback': callback
-});
-return false;
-}
-</script>
 
 </body>
 </html>
