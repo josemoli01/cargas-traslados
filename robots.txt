@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.cargasmolina.com/sitemap.xml
+
+# Bloqueos opcionales
+Disallow: /private/
+Disallow: /admin/
